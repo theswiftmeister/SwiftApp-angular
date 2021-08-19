@@ -1,0 +1,27 @@
+<div id="Minesweeper-Meister">
+  <h3>Mine-Sweeper Meister</h3>
+  <div class="user_inputs">
+    <div>
+      <p>Enter number of rows :</p>
+      <input #input_row type="text" name="rows_input" />
+    </div>
+    <div>
+      <p>Enter number of cols :</p>
+      <input #input_col type="text" name="cols_input" />
+    </div>
+    <div>
+      <p>Enter number of mines :</p>
+      <input #input_mine type="text" name="mines_input" />
+    </div>
+  </div>
+  <button
+    (click)="drawGrid(input_row.value, input_col.value, input_mine.value)"
+  >
+    Draw
+  </button>
+  <button (click)="log($event)">Log</button>
+
+  <div [ngStyle]="gridStyles" class="mine-sweeper">
+    <ng-template #componentHolder></ng-template>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.mine-sweeper {
+  margin: 15px auto;
+  display: grid;
+  gap: 0px 0px;
+}
+
+.user_inputs {
+  margin: 10px auto;
+}
+.user_inputs > div {
+  padding: 5px 0px;
+}
+.user_inputs > div > p {
+  display: inline-block;
+  padding-right: 5px;
+}
