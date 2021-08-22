@@ -15,13 +15,16 @@
     </div>
   </div>
   <button
+    class="play_btn"
     (click)="drawGrid(input_row.value, input_col.value, input_mine.value)"
   >
     Draw
   </button>
-  <button (click)="log($event)">Log</button>
 
-  <div [ngStyle]="gridStyles" class="mine-sweeper">
-    <ng-template #componentHolder></ng-template>
+  <div [ngStyle]="gridStyles" class="mine-sweeper" (click)="log($event)">
+    <ng-template #appMineComponent></ng-template>
+  </div>
+  <div>
+    <h3>{{ message }}</h3>
   </div>
 </div>

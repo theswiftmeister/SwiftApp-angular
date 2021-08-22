@@ -4,7 +4,9 @@ import {
   ViewChild,
   ElementRef,
   OnInit,
+  EventEmitter,
   AfterViewInit,
+  Output,
 } from '@angular/core';
 
 @Component({
@@ -21,11 +23,13 @@ export class MineGridComponent implements OnInit, AfterViewInit {
     this.value = num;
   }
   show = {
-    visibility: 'visible',
+    visibility: 'hidden',
   };
   constructor() {}
 
   ngOnInit(): void {}
   ngAfterViewInit() {}
-  onClick(evt: any) {}
+  onClick(evt: any) {
+    this.show.visibility = ' visible';
+  }
 }
